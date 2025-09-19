@@ -9,7 +9,6 @@ async def predict_charge(
     input_data: PredictionInput,
     model_service: MLService = Depends(lambda: ml_service)
 ):
-    """Predicts insurance charges based on input features."""
     prediction = model_service.predict(
         age=input_data.age,
         bmi=input_data.bmi,
